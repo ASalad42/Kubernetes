@@ -73,6 +73,10 @@ spec:
 
 ![image](https://user-images.githubusercontent.com/104793540/190618815-931a17cb-1fd0-45a5-85a8-89a8b2db95ea.png)
 
+### Nginx service 
+create nginx service yml file 
+
+
 ```
 apiVersion: v1
 
@@ -100,17 +104,17 @@ spec:
 
     targetPort: 80
 
-
-
 # Let's define the selector and label to connect to nginx deployment
 
   selector:
 
     app: nginx # this label connects this service to deployment
 
-  
-
   # Creating NodePort type of deployment
 
   type: NodePort # also use LoadBalancer -  for local use cluster IP
 ```
+- ``
+- ``
+- `kubectl create -f nginx-service.yml`
+- `kubectl get svc`
