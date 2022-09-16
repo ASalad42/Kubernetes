@@ -100,5 +100,35 @@ spec:
 
 - `kubectl create -f nginx-service.yml`
 - `kubectl get svc`
+-  localhost:30442
 - `kubectl edit deploy nginx-deploy` > can change anything in file while users are using app live - very very pwoerful 
 - `kubectl get pods` > only 2 replicas now after edit 
+
+
+### Node 
+- create deploy yml file 
+- `kubectl create -f node-deploy.yml` - where file is 
+- `kubectl get deploy`
+- `kubectl get pods`
+- create service yml file 
+- change port in node service to 30441
+- `kubectl create -f node-service.yml` > service/node created
+- `kubectl get svc`
+-  localhost:30441
+
+![image](https://user-images.githubusercontent.com/104793540/190651313-4b71e251-5408-410d-bc87-e37d2a330cf9.png)
+
+
+### Mongodb 
+- create deploy yml file
+- `kubectl create -f db-deploy.yml` > deployment.apps/db created
+- `kubectl get deploy`
+- `kubectl get pods`
+
+![image](https://user-images.githubusercontent.com/104793540/190652877-5f289f51-1cb2-4719-b5fb-76254b7efe30.png)
+
+- create service yml file
+- `kubectl create -f db-service.yml` > service/db created
+- `kubectl get svc`
+
+![image](https://user-images.githubusercontent.com/104793540/190654239-98f18274-0e49-4a4b-a9f1-62c1f342dc9d.png)
