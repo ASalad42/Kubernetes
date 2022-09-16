@@ -73,3 +73,44 @@ spec:
 
 ![image](https://user-images.githubusercontent.com/104793540/190618815-931a17cb-1fd0-45a5-85a8-89a8b2db95ea.png)
 
+```
+apiVersion: v1
+
+kind: Service
+
+# Metadata for name
+
+metadata:  
+
+  name: nginx-svc
+
+  namespace: default # sre  
+
+# Specificaition to include ports Selector to connecto to the deployment
+
+spec:  
+
+  ports:
+
+  - nodePort: 30442 # range is 30000-32768
+
+    port: 80
+
+    protocol: TCP
+
+    targetPort: 80
+
+
+
+# Let's define the selector and label to connect to nginx deployment
+
+  selector:
+
+    app: nginx # this label connects this service to deployment
+
+  
+
+  # Creating NodePort type of deployment
+
+  type: NodePort # also use LoadBalancer -  for local use cluster IP
+```
