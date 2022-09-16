@@ -1,6 +1,6 @@
 # Kubernetes - Production-Grade Container Orchestration
 
-![image](https://user-images.githubusercontent.com/104793540/190594956-69f73876-3172-44da-9486-b6359d7c1ff5.png)
+![image](https://user-images.githubusercontent.com/104793540/190595401-22a89af5-a911-4823-b50f-baa75e281805.png)
 
 
 Kubernetes, also known as K8s, is an open-source system for automating deployment, scaling, and management of containerized applications.
