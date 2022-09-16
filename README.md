@@ -70,3 +70,6 @@ spec:
 - `kubectl create -f nginx-deploy.yml`
 - `kubectl get deploy`
 - `kubectl get pods`
+
+![image](https://user-images.githubusercontent.com/104793540/190618815-931a17cb-1fd0-45a5-85a8-89a8b2db95ea.png)
+
