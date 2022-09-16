@@ -79,42 +79,26 @@ create nginx service yml file
 
 ```
 apiVersion: v1
-
 kind: Service
-
 # Metadata for name
-
 metadata:  
-
   name: nginx-svc
-
   namespace: default # sre  
-
 # Specificaition to include ports Selector to connecto to the deployment
-
 spec:  
-
   ports:
-
   - nodePort: 30442 # range is 30000-32768
-
     port: 80
-
     protocol: TCP
-
     targetPort: 80
-
 # Let's define the selector and label to connect to nginx deployment
-
   selector:
-
     app: nginx # this label connects this service to deployment
-
   # Creating NodePort type of deployment
-
   type: NodePort # also use LoadBalancer -  for local use cluster IP
 ```
-- ``
-- ``
+
 - `kubectl create -f nginx-service.yml`
 - `kubectl get svc`
+- `kubectl edit deploy nginx-deploy` > can change anything in file while users are using app live - very very pwoerful 
+- `kubectl get pods` > only 2 replicas now after edit 
