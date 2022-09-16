@@ -28,3 +28,45 @@ Typically you have several nodes in a cluster
 
 - Pods - To scale, create more pods
 - service 
+
+### Nginx-deploy 
+
+- create folder > create nginx-deploy.yml 
+
+```
+# kubectl get service_name - deployment -pod - rs
+# kubectl get deploy nginx-deploy (nginx_svc)
+# kubectl get pods 
+# kubectl describe pod_name
+# kubectl descrie svc kubernetes 
+
+apiVersion: apps/v1
+kind: Deployment
+
+# what would you like to call it - name the service/object
+metadata:
+  name: nginx-deploy # naming deployment 
+spec:
+  selector:
+    matchLabels:
+      app: nginx # looks for this lable to match with k8 service 
+  # lets create a replica set of this with instances/pods
+  replicas: 3
+  # template to use its lable for k8 service to launch in browser
+  template: 
+    metadata:
+      labels: 
+        app: nginx 
+    
+    spec:
+      containers:
+      - name: nginx 
+        image: asalad42/eng122_nginx_web_hosting:latest 
+        ports:
+        - containerPort: 80 
+```
+
+- `kubectl get svc`
+- `kubectl create -f nginx-deploy.yml`
+- `kubectl get deploy`
+- `kubectl get pods`
