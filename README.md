@@ -121,6 +121,14 @@ spec:
 
 ### Mongodb 
 - create deploy yml file
+
+```
+
+
+
+
+```
+
 - `kubectl create -f db-deploy.yml` > deployment.apps/db created
 - `kubectl get deploy`
 - `kubectl get pods`
@@ -128,6 +136,14 @@ spec:
 ![image](https://user-images.githubusercontent.com/104793540/190652877-5f289f51-1cb2-4719-b5fb-76254b7efe30.png)
 
 - create service yml file
+
+```
+
+
+
+
+
+```
 - `kubectl create -f db-service.yml` > service/db created
 - `kubectl get svc`
 
