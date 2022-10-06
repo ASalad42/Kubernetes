@@ -18,7 +18,6 @@ It groups containers that make up an application into logical units for easy man
 - Service discovery and load balancing
 - Automated rollouts and rollbacks
 
-
 - cluster 
 - Nodes - The Kubernetes Workers
 
