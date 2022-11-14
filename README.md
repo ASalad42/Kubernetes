@@ -141,7 +141,6 @@ spec:
 
 
 
-
 ```
 - `kubectl create -f db-service.yml` > service/db created
 - `kubectl get svc`
