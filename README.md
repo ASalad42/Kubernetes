@@ -28,6 +28,28 @@ Typically you have several nodes in a cluster
 - Pods - To scale, create more pods
 - service 
 
+ Agent Node:
+- Pods (containers from Docker)
+- Services (connects containers e.g two apps giving them the same label)
+
+Controller Node:
+- using kubectl, allows for the management of the agent nodes 
+
+```
+# K8 works with API versions to declare resources
+# have to declare the api version and the kind of service/component
+# Services: deployment, service, pods, replicasets, crobjob, autoscalinggroup, horizozontalscaling
+
+# kubectl get service_name - deployment - pods 
+# kubectl get deploy nginx_deploy 
+# kubectl get pods
+# kubectl describe pod pod_name
+# kubectl delete svc svc_name
+# kubectl delete pod pod_name
+
+```
+
+
 ### Nginx-deploy 
 
 - create folder > create nginx-deploy.yml 
