@@ -143,12 +143,7 @@ spec:
 ### Mongodb 
 - create deploy yml file
 
-```
 
-
-
-
-```
 
 - `kubectl create -f db-deploy.yml` > deployment.apps/db created
 - `kubectl get deploy`
@@ -158,12 +153,7 @@ spec:
 
 - create service yml file
 
-```
 
-
-
-
-```
 - `kubectl create -f db-service.yml` > service/db created
 - `kubectl get svc`
 
