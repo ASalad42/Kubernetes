@@ -158,3 +158,13 @@ spec:
 - `kubectl get svc`
 
 ![image](https://user-images.githubusercontent.com/104793540/190654239-98f18274-0e49-4a4b-a9f1-62c1f342dc9d.png)
+
+
+clean up 
+
+- `kubectl delete deployment nginx-deploy`
+- `kubectl delete deployment db`
+- `kubectl delete deployment node`
+- `kubectl delete service/db`
+- `kubectl delete service/nginx-svc`
+- `kubectl delete service/node`
